@@ -8,7 +8,11 @@
 #include "versionPrint.hpp"
 #include "ftime.hpp"
 #include "help.hpp"
-
+#include "helloMessage.hpp"
+#include <cstdlib>
+#include "clearTerm.hpp"
+#include "guide.hpp"
+#include "credits.hpp"
 
 // The if statements
 int main() 
@@ -26,7 +30,7 @@ int main()
 		string input;
 		cout << fline << endl;
 		cout << "pointzero:~$";
-		cin >> input;
+		getline(cin, input);
 		if (input == "quit") 
 		{
 			cout << "Thankyou for using Point Zero Shell!" << endl;
@@ -52,6 +56,22 @@ int main()
 		else if (input == "div")
 		{
 			division();
+		}
+		else if (input == "credits")
+		{
+			credits();
+		}
+		else if (input == "clear")
+		{
+			clearTerminal();
+		}
+		else if (input == "guide")
+		{
+			guide();
+		}
+		else if (input == "hello" || input == "hi" || input == "Hello" || input == "Hi")
+		{
+			helloMessage();
 		}
 		else if (input == "time")
 		{

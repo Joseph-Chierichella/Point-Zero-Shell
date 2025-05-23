@@ -13,6 +13,9 @@ void help()
     cout << findent << " div         : divide two numbers" << endl;
     cout << findent << " time        : prints current time" << endl;
     cout << findent << " version     : Displays the version" << endl;
+    cout << findent << " hello       : say hello to the computer" << endl;
+    cout << findent << " clear       : This will clear the terminal" << endl;
+    cout << findent << " guide       : This is a guide!" << endl;
 }
 
 

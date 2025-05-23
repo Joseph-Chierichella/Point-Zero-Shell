@@ -6,7 +6,7 @@
 // VERSION
 void versionPrint() {
 	using namespace std;
-	cout << findent << "Point Zero Shell | version 1.2" << endl;
+	cout << findent << "Point Zero Shell | version 1.3" << endl;
 }
 
 
