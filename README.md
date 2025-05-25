@@ -68,8 +68,8 @@ pacman -S mingw-w64-x86_64-gcc
 Clone the repo and navigate to it:
 
 ```bash
-git clone https://github.com/your-username/point-zero-shell.git
-cd point-zero-shell
+git clone https://github.com/Joseph-Chierichella/Point-Zero-Shell
+cd Point-Zero-Shel
 ```
 
 Then compile the `main.cpp` file:
