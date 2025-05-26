@@ -18,7 +18,7 @@ Contributions are welcome! Please feel free to fork the repository, make improve
 
 ## 🔧 Installation & Usage
 
-To use Point Zero Shell, ensure you have Git and the g++ compiler installed on your system. You also must be using Linux. If you have a windows computer you can get a Linux terminal and do the following steps there.
+To use Point Zero Shell, ensure you have Git and the g++ compiler installed on your system. You also must be using Linux. If you have a Windows computer you can get a Linux terminal and do the following steps there.
 
 ### ✅ Install Git
 
