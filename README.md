@@ -68,7 +68,7 @@ pacman -S mingw-w64-x86_64-gcc
 Clone the repo and navigate to it:
 
 ```bash
-git clone https://github.com/your-username/point-zero-shell.git
+git clone https://github.com/Joseph-Chierichella/Point-Zero-Shell.git
 cd point-zero-shell
 ```
 

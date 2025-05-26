@@ -4,9 +4,11 @@
 #define VERSIONPRINT_HPP
 
 // VERSION
+float version = 1.4;
+
 void versionPrint() {
 	using namespace std;
-	cout << findent << "Point Zero Shell | version 1.3" << endl;
+	cout << findent << "Point Zero Shell | version " << version << endl;
 }
 
 

@@ -16,6 +16,9 @@ void help()
     cout << findent << " hello       : say hello to the computer" << endl;
     cout << findent << " clear       : This will clear the terminal" << endl;
     cout << findent << " guide       : This is a guide!" << endl;
+    cout << findent << " port scan   : This is a port scan!" << endl;
+    cout << findent << " apps        : Displays all compatible apps" << endl;
+    cout << findent << " errors      : Displays all error messages" << endl;
 }
 
 
