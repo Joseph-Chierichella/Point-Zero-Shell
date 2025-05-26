@@ -72,7 +72,6 @@ Clone the repo and navigate to it:
 =======
 git clone https://github.com/Joseph-Chierichella/Point-Zero-Shell.git
 cd Point-Zero-Shell
->>>>>>> 80a98f4bcf1796bd6cae2a9a3e0085bb3693a779
 ```
 
 Then compile the `main.cpp` file:
