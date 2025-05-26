@@ -22,44 +22,21 @@ To use Point Zero Shell, ensure you have Git and the g++ compiler installed on y
 
 ### ✅ Install Git
 
-**Linux (Debian/Ubuntu):**
 ```bash
 sudo apt update
 sudo apt install git
 ```
 
-**macOS:**
-```bash
-brew install git
-```
-
-> Requires Homebrew: https://brew.sh
-
-**Windows:**  
-Download Git from https://git-scm.com/download/win and follow the installer instructions.
-
 ---
 
 ### ✅ Install g++
 
-**Linux (Debian/Ubuntu):**
+
 ```bash
 sudo apt update
 sudo apt install g++
 ```
 
-**macOS:**
-```bash
-brew install gcc
-```
-
-**Windows (via MSYS2):**
-1. Download and install from https://www.msys2.org/
-2. Open MSYS2 shell and run:
-```bash
-pacman -Syu
-pacman -S mingw-w64-x86_64-gcc
-```
 
 ---
 
@@ -71,19 +48,12 @@ Clone the repo and navigate to it:
 
 =======
 git clone https://github.com/Joseph-Chierichella/Point-Zero-Shell.git
-cd Point-Zero-Shell
+cd Point-Zero-Shell/script
 ```
 
 Then compile the `main.cpp` file:
 
-**Linux / macOS:**
 ```bash
 g++ main.cpp -o pointzero
 ./pointzero
-```
-
-**Windows (MSYS2 MinGW shell):**
-```bash
-g++ main.cpp -o pointzero.exe
-./pointzero.exe
 ```
