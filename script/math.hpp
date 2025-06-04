@@ -1,7 +1,9 @@
-#include <iostream>
 #include "indenting.hpp"
+#include <chrono>
+#include <thread>
 #ifndef MATH_HPP
 #define MATH_HPP
+
 
 void add(float add1, float add2) 
 {
@@ -27,8 +29,8 @@ void div(float div1, float div2)
 	float div3 = div1 / div2;
 	cout << findent << ": " << div1 << " / " << div2 << " = " << div3 << endl;
 }
-int addition()
-{	
+float addition()
+{
 	using namespace std;
 	float add11;
 	cout << findent << ": ";

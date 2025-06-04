@@ -1,7 +1,5 @@
 #ifndef VIM_HPP
 #define VIM_HPP
-#include <iostream>
-#include <cstdlib>
 
 inline void vim()
 {

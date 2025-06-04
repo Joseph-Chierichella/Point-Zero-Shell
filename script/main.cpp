@@ -19,28 +19,44 @@
 #include "error.hpp"
 #include "vim.hpp"
 #include "tshark.hpp"
+#include "length.hpp"
+#include "websiteIp.hpp"
+#include "termcolor.hpp"
+#include "termCommands.hpp"
+
 
 // The if statements
 int main() 
 {
 	using namespace std;
 	cout << endl;
-	cout << "Welcome to PointZero Shell!" << endl;
-	cout << "To see commands, use our 'help' command" << endl;
-	cout << "To exit the program, type 'quit'" << endl;
+	cout << termcolor::bright_yellow;
+	cout << "        Welcome to PointZero Shell!" << endl;
+	cout << "To view the guide, use the 'guide' command!" << endl;
+	cout << "To view the commands, use the 'help' command!" << endl;
+	cout << "To quit the program, use the 'quit' command!" << endl;
+	cout << termcolor::bright_yellow;
+	cout << fline << endl;
+	cout << termcolor::reset;
+	cout << termcolor::reset;
 	int i = 0;
 	string input;
 	while (input != "quit" && i == 0) 
 	{
 		int i = 0;
 		string input;
-		cout << fline << endl;
+		cout << termcolor::bright_cyan;
 		cout << "pointzero:~$";
+		cout << termcolor::reset;
 		getline(cin, input);
 		if (input == "quit") 
 		{
+			cout << termcolor::magenta;
 			cout << findent << "Thankyou for using Point Zero Shell!" << endl;
+			cout << termcolor::reset;
+			cout << termcolor::bright_yellow;
 			cout << fline << endl;
+			cout << termcolor::reset;
 			int i = 1;
 			break;
 		}
@@ -68,6 +84,10 @@ int main()
 		{
 			credits();
 		}
+		else if (input == "system" || input == "system " || input == "System" || input == "System ")
+		{
+			runCommands();
+		}
 		else if (input == "tshark" || input == "Tshark")
 		{
 			tshark();
@@ -92,6 +112,10 @@ int main()
 		{
 			errors();
 		}
+		else if (input == "websiteip" || input == "websiteIp" || input == "Websiteip" || input == "website ip" || input == "Website Ip")
+		{
+			websiteIp();
+		}
 		else if (input == "port scan")
 		{
 			runPortScan();
@@ -99,6 +123,10 @@ int main()
 		else if (input == "guide")
 		{
 			guide();
+		}
+		else if (input == "length" || input == "length " || input == "Length" || input == "Length ")
+		{
+			length();
 		}
 		else if (input == "hello" || input == "hi" || input == "Hello" || input == "Hi")
 		{
@@ -114,8 +142,14 @@ int main()
 		}
 		else
 		{
+			cout << termcolor::bright_yellow;
 			cout << findent << "Error || 02" << endl;
+			cout << termcolor::reset;
 		}
+		cout << termcolor::bright_yellow;
+		cout << fline << endl;
+		cout << termcolor::reset;
+
 	}
 	return 0;
 }

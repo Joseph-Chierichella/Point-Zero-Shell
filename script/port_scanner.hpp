@@ -9,6 +9,7 @@
 #include <limits>
 #include <stdexcept>
 
+#include "termcolor.hpp"
 #include "indenting.hpp"
 
 #ifdef _WIN32
@@ -24,7 +25,6 @@
     #include <poll.h>
     #include <errno.h>
 #endif
-
 
 std::mutex g_mtx_scanner_output;
 
@@ -44,7 +44,7 @@ inline void scanSinglePort(const std::string& ipAddress, int port, int timeoutMi
     WSADATA wsaData;
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
         std::lock_guard<std::mutex> lock(g_mtx_scanner_output);
-        std::cerr << findent << "WSAStartup failed for port " << port << ". Error: " << WSAGetLastError() << std::endl;
+        std::cerr << findent << "WSAStartup failed for port " << port << ". Error || 03 || " << WSAGetLastError() << std::endl;
         return;
     }
     #endif
@@ -53,7 +53,7 @@ inline void scanSinglePort(const std::string& ipAddress, int port, int timeoutMi
         sock = socket(AF_INET, SOCK_STREAM, 0);
         if (sock < 0) {
             std::lock_guard<std::mutex> lock(g_mtx_scanner_output);
-            std::cerr << findent << "Error: Could not create socket for port " << port << std::endl;
+            std::cerr << findent << "Error || 04 || " << port << std::endl;
             goto cleanup;
         }
 
@@ -82,7 +82,7 @@ inline void scanSinglePort(const std::string& ipAddress, int port, int timeoutMi
         serverAddr.sin_port = htons(port);
         if (!convertIpToBinary(ipAddress, &serverAddr.sin_addr)) {
             std::lock_guard<std::mutex> lock(g_mtx_scanner_output);
-            std::cerr << findent << "Error: Invalid IP address format provided to scanner: " << ipAddress << std::endl;
+            std::cerr << findent << "Error || 05 || " << ipAddress << std::endl;
             goto cleanup;
         }
 
@@ -154,6 +154,7 @@ cleanup:
 }
 
 inline void runPortScan() {
+	std::cout << termcolor::bright_yellow;
     std::string ipAddress;
     int startPort, endPort;
     int timeoutSeconds = 1;
@@ -164,7 +165,7 @@ inline void runPortScan() {
 
     sockaddr_in sa;
     if (!convertIpToBinary(ipAddress, &sa.sin_addr)) {
-        std::cerr << findent << "Invalid IP address format. Please enter a valid IPv4 address." << std::endl;
+        std::cerr << findent << "Error || 05" << std::endl;
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         return;
@@ -223,6 +224,7 @@ inline void runPortScan() {
     }
 
     std::cout << findent << "Port scan complete.\n";
+    std::cout << termcolor::reset;
 }
 
 #endif

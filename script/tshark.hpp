@@ -1,7 +1,5 @@
 #ifndef TSHARK_HPP
 #define TSHARK_HPP
-#include <iostream>
-#include <cstdlib>
 
 inline void tshark()
 {

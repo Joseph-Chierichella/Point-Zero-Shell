@@ -1,7 +1,5 @@
 #ifndef NVIM_HPP
 #define NVIM_HPP
-#include <iostream>
-#include <cstdlib>
 
 inline void nvim() 
 {
